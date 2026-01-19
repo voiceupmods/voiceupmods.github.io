@@ -3,81 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Up Mods - Mod de Voz para Minecraft</title>
+    <title>EchoVoice - Proximity Chat</title>
     <style>
+        /* Reset e Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #282c34; /* Fundo escuro */
-            color: #f8f8f2; /* Texto claro */
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background.jpg'); /* Substitua pelo seu fundo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
             min-height: 100vh;
         }
-        .container {
-            background-color: #3b4048; /* Fundo do container */
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 800px;
-            width: 100%;
-        }
-        h1 {
-            color: #61dafb; /* Azul claro para o título */
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-        .download-button {
-            display: inline-block;
-            background-color: #4CAF50; /* Verde para o botão */
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
+
+        /* Hero Section */
+        .hero { padding: 80px 20px; }
+        .logo-title { color: #2ecc71; font-size: 3.5rem; font-weight: bold; margin-bottom: 10px; }
+        .subtitle { color: #ccc; max-width: 600px; margin: 0 auto 30px; line-height: 1.5; }
+
+        /* Badges de Status */
+        .stats-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px 20px;
             border-radius: 8px;
-            font-size: 1.3em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        .download-button:hover {
-            background-color: #45a049; /* Verde mais escuro no hover */
-        }
-        .version-info {
-            font-size: 0.9em;
-            color: #aaa;
-            margin-top: 15px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+        .stat-card span { display: block; font-size: 0.8rem; color: #888; }
+        .stat-card strong { color: #2ecc71; }
+
+        /* Botão de Download */
+        .btn-download {
+            background-color: #2ecc71;
+            color: #000;
+            padding: 15px 40px;
             border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
         }
+        .btn-download:hover { transform: translateY(-3px); background-color: #27ae60; }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .feature-item {
+            background: rgba(20, 20, 20, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            border-bottom: 3px solid #2ecc71;
+        }
+        .feature-item h3 { font-size: 1rem; margin-bottom: 10px; color: #2ecc71; }
+        .feature-item p { font-size: 0.85rem; color: #bbb; line-height: 1.4; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Voice Up Mods</h1>
-        <p>
-            Traga uma nova dimensão de comunicação para o seu Minecraft com o Voice Up Mods! 
-            Converse com seus amigos no jogo com áudio de alta qualidade e personalize sua experiência de voz.
-        </p>
-        <p>
-            Nosso mod é fácil de instalar e compatível com as versões mais recentes do Minecraft.
-            Baixe agora e mergulhe em uma comunicação mais imersiva!
-        </p>
-        
-        <a href="#" class="download-button" id="downloadLink">Baixar Voice Up Mod (v1.0)</a>
-        <p class="version-info">Versão 1.0 - Compatível com Minecraft 1.20.1</p>
+
+    <section class="hero">
+        <h1 class="logo-title">VoiceUp</h1>
+        <p class="subtitle">O próximo nível de chat de voz por proximidade para Minecraft. Suporte para Fabric com ultra-baixa latência.</p>
+
+        <div class="stats-container">
+            <div class="stat-card"><span>Users</span><strong>5,000+</strong></div>
+            <div class="stat-card"><span>Version</span><strong>1.21.1</strong></div>
+            <div class="stat-card"><span>Support</span><strong>Fabric</strong></div>
+        </div>
+
+        <a href="LINK_DO_SEU_MOD_AQUI" class="btn-download">Download for Fabric</a>
+    </section>
+
+    <div class="features-grid">
+        <div class="feature-item">
+            <h3>🔊 Proximity Voice</h3>
+            <p>O volume muda dinamicamente com base na distância entre os jogadores.</p>
+        </div>
+        <div class="feature-item">
+            <h3>🎧 3D Audio</h3>
+            <p>Ouça os jogadores vindo da esquerda ou direita dependendo da posição.</p>
+        </div>
+        <div class="feature-item">
+            <h3>⚡ Low Latency</h3>
+            <p>Motor de áudio otimizado para uma jogabilidade fluida e sem atrasos.</p>
+        </div>
+        <div class="feature-item">
+            <h3>🔐 Encrypted</h3>
+            <p>Todos os dados de voz são criptografados para sua segurança total.</p>
+        </div>
     </div>
+
 </body>
 </html>
