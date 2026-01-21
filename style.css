@@ -1,0 +1,253 @@
+:root {
+    --bg-page: #fffeff;
+    --bg-card: #ffffff;
+    --bg-accent: #d9d0c1; /* Bege da foto */
+    --text-main: #4a443f;
+    --text-dim: #9e948a;
+    --radius: 24px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.seu-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seu-card:hover {
+    transform: translateY(-5px); /* Sobe um pouquinho */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Sombra aumenta */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efeito 3D Profissional para os botões */
+.btn-3d {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 0 #bcaea0, 0 8px 15px rgba(0,0,0,0.1); /* Sombra que cria a base 3D */
+    position: relative;
+    top: 0;
+}
+
+.btn-3d:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #bcaea0, 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-3d:active {
+    top: 4px; /* Simula o botão sendo pressionado para baixo */
+    box-shadow: 0 2px 0 #bcaea0, 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Garante que o Documentation tenha cores distintas para contraste */
+.btn-sub.btn-3d {
+    background: #ffffff;
+    border: 1px solid #EADBC8;
+    box-shadow: 0 6px 0 #EADBC8, 0 8px 15px rgba(0,0,0,0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'Quicksand', sans-serif;
+    padding: 40px 20px;
+}
+
+.main-wrapper {
+    padding-top: px; /* Cria o espaço necessário para a barra fixa */
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Isso garante que o FAQ ocupe o espaço correto */
+.faq-section {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.faq-grid {
+    display: grid;
+    /* Força duas colunas */
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+}
+
+/* Ajuste para telas de celular (fica um embaixo do outro no mobile) */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Base Card Style */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 30px;
+    /* Sombra Forte e Marcante */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Navbar */
+/* NAVBAR FIXA E IDENTICA À ANTERIOR */
+.navbar {
+    position: -webkit-sticky; /* Suporte para navegadores antigos */
+    position: sticky;         /* O segredo para ela seguir depois de um ponto */
+    top: 5px;                /* Ela vai "grudar" quando estiver a 20px do topo */
+    
+    /* Mantém o alinhamento e estilo que você já tinha */
+    width: 100%;              
+    max-width: 1100px;        
+    margin: 0 auto 20px auto; /* Centraliza e dá espaço para o conteúdo de baixo */
+    z-index: 1000;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    
+    /* Estética sólida que vira "flutuante" */
+    background: #ffffff; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra para destacar quando subir */
+}
+
+/* Remova o padding-top do body que colocamos antes, não precisa mais dele */
+body {
+    padding-top: 0; 
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; }
+.nav-right { display: flex; align-items: center; gap: 30px; }
+.nav-links { display: flex; list-style: none; gap: 25px; }
+.nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; }
+
+.btn-nav {
+    background: var(--bg-accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px;
+}
+
+.badge {
+    background: var(--bg-page);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-dim);
+}
+
+h1 { font-size: 3rem; margin: 20px 0; line-height: 1.1; }
+h1 .dim { color: var(--bg-accent); }
+.hero-content p { color: var(--text-dim); margin-bottom: 30px; }
+
+.hero-btns { display: flex; gap: 15px; }
+.btn-main { background: var(--bg-accent); border: none; padding: 15px 30px; border-radius: 12px; font-weight: 700; color: rgb(85, 85, 85); cursor: pointer; 
+display: inline-flex; /* Alinha o ícone e o texto lado a lado */
+    align-items: center;  /* Centraliza verticalmente */
+    gap: 10px;            /* Cria um espaço amigável entre o ícone e o texto */
+    color: #000000 !important; /* Garante que o texto seja preto */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Garante que o ícone acompanhe a cor do texto */
+.btn-main i {
+    font-size: 1.1rem;
+    color: inherit; 
+}
+.btn-sub { background: var(--bg-page); border: none; padding: 15px 30px; border-radius: 12px; font-weight: 700; color: var(--text-dim); cursor: pointer; }
+
+.main-img { width: 100%; border-radius: 18px; display: block; }
+
+/* Stats Bar */
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg-accent);
+    color: var(--text-main);
+    padding: 40px;
+    text-align: center;
+}
+
+.stats-bar .number { display: block; font-size: 2rem; font-weight: 700; }
+.stats-bar .label { font-size: 0.8rem; font-weight: 600; opacity: 0.8; }
+.divider { width: 1px; height: 40px; background: rgba(0,0,0,0.1); }
+
+/* Features */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; 
+   
+}
+
+
+/* Garante que a bola apareça e fique acima de tudo */
+.feature-card .dot { 
+    display: block;    /* Força ela a ocupar uma linha própria */
+    width: 10px;       /* Tamanho pequeno como você pediu */
+    height: 10px; 
+    background: var(--bg-accent); 
+    border-radius: 50%; 
+    margin-bottom: 25px; /* Espaço para não encostar no título grande */
+    flex-shrink: 0;    /* Impede que o texto "esmague" a bola até ela sumir */
+}
+
+/* Seus textos com a fonte aumentada */
+.feature-card h3 { 
+    font-size: 1.6rem; 
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+} 
+
+.feature-card p { 
+    font-size: 1.2rem; 
+    color: var(--text-dim);
+    line-height: 1.5;
+}
